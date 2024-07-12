@@ -26,7 +26,7 @@ def generate_receipt(basket: list) -> str:
         item_name = item['name']
         item_price = item['price']
 
-        # Use a tuple as key to differentiate items with same name but different price
+        # Tuple as key to differentiate items with same name but different price
         item_key = (item_name, item_price)
         if item_key in item_counts:
             item_counts[item_key]['quantity'] += 1
@@ -38,11 +38,11 @@ def generate_receipt(basket: list) -> str:
 
     for (item_name, item_price), info in item_counts.items():
         quantity = info['quantity']
-        total_price_for_item = info['total_price']
-        if total_price_for_item == 0:
+        item_total_price = info['total_price']
+        if item_total_price == 0:
             answer += f'{item_name} x {quantity} - Free\n'
         else:
-            answer += f'{item_name} x {quantity} - £{total_price_for_item:.2f}\n'
+            answer += f'{item_name} x {quantity} - £{item_total_price:.2f}\n'
 
     answer += f"Total: £{total_price:.2f}"
     return answer
