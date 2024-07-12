@@ -5,7 +5,6 @@ basket = []
 def add_to_basket(item: dict) -> list:
     """ Takes an item from a dictionary and it to a list. """
     basket.append(item)
-    return
 
 
 def generate_receipt(basket: list) -> str:
@@ -14,15 +13,14 @@ def generate_receipt(basket: list) -> str:
     answer = ""
     if len(basket) == 0:
         return "Basket is empty"
-    else:
-        for i in basket:
-            if i['price'] == 0.00:
-                total_price += 0
-                answer += (f"{i['name']} - Free\n")
-            else:
-                total_price += i["price"]
-                answer += (f"{i['name']} - £{i['price']:.2f}\n")
-        answer += f"Total: £{total_price:.2f}"
+    for i in basket:
+        if i['price'] == 0.00:
+            total_price += 0
+            answer += (f"{i['name']} - Free\n")
+        else:
+            total_price += i["price"]
+            answer += (f"{i['name']} - £{i['price']:.2f}\n")
+    answer += f"Total: £{total_price:.2f}"
     return answer
 
 
