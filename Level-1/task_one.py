@@ -16,8 +16,12 @@ def generate_receipt(basket: list) -> str:
         return "Basket is empty"
     else:
         for i in basket:
-            total_price += i["price"]
-            answer += (f'{i["name"]} - £{i["price"]:.2f}\n')
+            if i['price'] == 0.00:
+                total_price += 0
+                answer += (f"{i['name']} - Free\n")
+            else:
+                total_price += i["price"]
+                answer += (f"{i['name']} - £{i['price']:.2f}\n")
         answer += f"Total: £{total_price:.2f}"
     return answer
 
