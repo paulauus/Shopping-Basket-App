@@ -4,19 +4,13 @@ rootdir: /home/runner/work/Assessment-Fundamentals-Week-1/Assessment-Fundamental
 collected 28 items / 3 errors
 
 !!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!!
-============================== 3 errors in 0.40s ===============================
+============================== 3 errors in 0.38s ===============================
 ************* Module task_one
 Level-1/task_one.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-Level-1/task_one.py:5:0: R1711: Useless return at end of function or method (useless-return)
-Level-1/task_one.py:11:21: W0621: Redefining name 'basket' from outer scope (line 2) (redefined-outer-name)
-Level-1/task_one.py:15:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+Level-1/task_one.py:10:21: W0621: Redefining name 'basket' from outer scope (line 2) (redefined-outer-name)
 ************* Module task_two
 Level-2/task_two.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-Level-2/task_two.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
-Level-2/task_two.py:10:18: W0613: Unused argument 'item' (unused-argument)
-Level-2/task_two.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
-Level-2/task_two.py:15:21: W0621: Redefining name 'basket' from outer scope (line 1) (redefined-outer-name)
-Level-2/task_two.py:15:21: W0613: Unused argument 'basket' (unused-argument)
+Level-2/task_two.py:16:21: W0621: Redefining name 'basket' from outer scope (line 1) (redefined-outer-name)
 ************* Module task_three
 Level-3/task_three.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-3/task_three.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)
@@ -25,5 +19,5 @@ Level-3/task_three.py:1:21: W0613: Unused argument 'receipt_string' (unused-argu
 Level-3/task_three.py:7:4: C0103: Constant name "receipt_string" doesn't conform to UPPER_CASE naming style (invalid-name)
 
 ------------------------------------------------------------------
-Your code has been rated at 6.05/10 (previous run: 6.05/10, +0.00)
+Your code has been rated at 8.47/10 (previous run: 8.47/10, +0.00)
 
