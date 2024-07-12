@@ -4,7 +4,7 @@ rootdir: /home/runner/work/Assessment-Fundamentals-Week-1/Assessment-Fundamental
 collected 28 items / 3 errors
 
 !!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!!
-============================== 3 errors in 0.38s ===============================
+============================== 3 errors in 0.47s ===============================
 ************* Module task_one
 Level-1/task_one.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-1/task_one.py:10:21: W0621: Redefining name 'basket' from outer scope (line 2) (redefined-outer-name)
@@ -13,11 +13,9 @@ Level-2/task_two.py:1:0: C0114: Missing module docstring (missing-module-docstri
 Level-2/task_two.py:16:21: W0621: Redefining name 'basket' from outer scope (line 1) (redefined-outer-name)
 ************* Module task_three
 Level-3/task_three.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-Level-3/task_three.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)
-Level-3/task_three.py:1:21: W0621: Redefining name 'receipt_string' from outer scope (line 7) (redefined-outer-name)
-Level-3/task_three.py:1:21: W0613: Unused argument 'receipt_string' (unused-argument)
-Level-3/task_three.py:7:4: C0103: Constant name "receipt_string" doesn't conform to UPPER_CASE naming style (invalid-name)
+Level-3/task_three.py:1:21: W0621: Redefining name 'receipt_string' from outer scope (line 38) (redefined-outer-name)
+Level-3/task_three.py:38:4: C0103: Constant name "receipt_string" doesn't conform to UPPER_CASE naming style (invalid-name)
 
 ------------------------------------------------------------------
-Your code has been rated at 8.47/10 (previous run: 8.47/10, +0.00)
+Your code has been rated at 9.09/10 (previous run: 9.09/10, +0.00)
 
