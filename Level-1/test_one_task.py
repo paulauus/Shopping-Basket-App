@@ -148,3 +148,8 @@ def test_add_to_basket():
     add_to_basket(item)
     add_to_basket(item)
     assert [item, item]
+
+def test_only_free_items():
+    basket = [{"name": "Milk",  "price": 0.0}, {"name": "Bread", "price": 0},{"name": "Eggs", "price": 0.00}]
+    expected_output = 'Milk - Free\nBread - Free\nEggs - Free\nTotal: £0.00'
+    assert generate_receipt(basket) == expected_output
