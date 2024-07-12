@@ -1,5 +1,5 @@
 def generate_invoice(receipt_string: str) -> str:
-    """ Calculates the """
+    """ Calculates the VAT prices for a shopping cart and returns an updated string. """
     # Split the lines
     lines = receipt_string.strip().split("\n")
     total_price = 0
@@ -10,12 +10,12 @@ def generate_invoice(receipt_string: str) -> str:
         if line.startswith("Total:"):
             total_price = float(line.strip().split('£')[1])
         else:
-            # Split the line to extract item name and price
+            # Split the line to get item name and price
             item_name, item_price_str = line.split(" - £")
             item_price = float(item_price_str)
-            # Calculate VAT-adjusted price
-            item_VAT_price = item_price * 0.8
-            items.append(f"{item_name} - £{item_VAT_price:.2f}")
+            # Calculate price with VAT adjustment
+            item_vat_price = item_price * 0.8
+            items.append(f"{item_name} - £{item_vat_price:.2f}")
 
     # Calculate VAT
     vat = total_price - sum(float(line.split(' - £')[1]) for line in items)
