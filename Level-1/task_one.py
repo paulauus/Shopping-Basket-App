@@ -12,9 +12,13 @@ def generate_receipt(basket: list) -> str:
     """ Outputs the items in the basket, their prices and the total price. """
     total_price = 0
     answer = ""
-    for i in basket:
-        total_price += i["price"]
-        answer += (f'{i["name"]} - £{i["price"]}')
+    if len(basket) == 0:
+        return "Basket is empty"
+    else:
+        for i in basket:
+            total_price += i["price"]
+            answer += (f'{i["name"]} - £{i["price"]:.2f}\n')
+        answer += f"Total: £{total_price:.2f}"
     return answer
 
 
