@@ -3,11 +3,19 @@ basket = []
 
 
 def add_to_basket(item: dict) -> list:
-    pass
+    """ Takes an item from a dictionary and it to a list. """
+    basket.append(item)
+    return
 
 
 def generate_receipt(basket: list) -> str:
-    pass
+    """ Outputs the items in the basket, their prices and the total price. """
+    total_price = 0
+    answer = ""
+    for i in basket:
+        total_price += i["price"]
+        answer += (f'{i["name"]} - £{i["price"]}')
+    return answer
 
 
 if __name__ == "__main__":
